@@ -8,13 +8,13 @@
     <artifactId>yeremeyev-java-core</artifactId>
     <name>Common Java Tools</name>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- artifact with main function. This artifact is at bin directory -->
-        <project.src.artifactId>yeremeyev-common</project.src.artifactId>
+        <project.src.artifactId>yeremeyev-java-core</project.src.artifactId>
         <project.name.full>yeremeyev java core</project.name.full>
         <project.application.name>Common Java Tools Module</project.application.name>
 

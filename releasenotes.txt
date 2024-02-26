@@ -1,0 +1,10 @@
+yeremeyev java core
+
+-------------------------------------------------------------------------------
+
+# version 1.0.0
+
+#### on Released on 26-02-2024 ####
+
+### Overall improvements ###
+* simple xml reader/writer
