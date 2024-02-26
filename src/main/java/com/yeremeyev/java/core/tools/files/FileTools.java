@@ -1,4 +1,4 @@
-package com.yeremeyev.java.core.tools;
+package com.yeremeyev.java.core.tools.files;
 
 import java.io.File;
 import java.io.FileInputStream;

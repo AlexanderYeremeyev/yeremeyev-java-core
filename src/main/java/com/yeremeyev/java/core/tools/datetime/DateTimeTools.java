@@ -1,4 +1,4 @@
-package com.yeremeyev.java.core.tools;
+package com.yeremeyev.java.core.tools.datetime;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

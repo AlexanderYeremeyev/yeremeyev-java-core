@@ -1,4 +1,4 @@
-package com.yeremeyev.java.core.tools;
+package com.yeremeyev.java.core.tools.strings;
 
 public class StringTools {
     public static final String EMPTY = "";

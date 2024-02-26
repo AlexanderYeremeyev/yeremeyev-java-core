@@ -1,4 +1,4 @@
-package com.yeremeyev.java.core.tools;
+package com.yeremeyev.java.core.tools.streams;
 
 import java.io.InputStream;
 import java.io.OutputStream;

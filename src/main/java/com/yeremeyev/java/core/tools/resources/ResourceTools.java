@@ -1,6 +1,8 @@
-package com.yeremeyev.java.core.tools;
+package com.yeremeyev.java.core.tools.resources;
 
 import com.yeremeyev.java.core.logger.Logger;
+import com.yeremeyev.java.core.tools.SystemProperties;
+import com.yeremeyev.java.core.tools.files.PathTools;
 
 import javax.swing.ImageIcon;
 import java.io.File;

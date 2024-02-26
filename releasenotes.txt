@@ -8,3 +8,6 @@ yeremeyev java core
 
 ### Overall improvements ###
 * simple xml reader/writer
+* String tools
+* system properties
+* java bin files reader

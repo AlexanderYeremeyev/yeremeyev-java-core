@@ -1,6 +1,6 @@
-package com.yeremeyev.java.core.tools.java;
+package com.yeremeyev.java.core.tools.languages.java.bin.reader;
 
-import com.yeremeyev.java.core.tools.FileTools;
+import com.yeremeyev.java.core.tools.files.FileTools;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
@@ -12,7 +12,7 @@ import java.util.zip.ZipInputStream;
 /**
  * class contains methods to read "jar" and "class" files
  */
-public class JavaFileReaderTools {
+public class JavaBinaryFileReaderTools {
     private static final String JAR_FILE_POSTFIX = ".jar";
     private static final String CLASS_FILE_POSTFIX = ".class";
 

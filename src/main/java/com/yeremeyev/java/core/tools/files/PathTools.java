@@ -1,4 +1,7 @@
-package com.yeremeyev.java.core.tools;
+package com.yeremeyev.java.core.tools.files;
+
+import com.yeremeyev.java.core.tools.strings.StringTools;
+import com.yeremeyev.java.core.tools.SystemProperties;
 
 public class PathTools {
     public static final String SLASH_SYMBOL_STRING = "/";
