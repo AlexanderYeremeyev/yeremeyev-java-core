@@ -3,10 +3,11 @@ package com.yeremeyev.java.core.tools.files;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
+import java.io.IOException;
 
 public class FileTools {
 
-    public static byte[] readyFile(String fileName) {
+    public static byte[] readyFile(String fileName) throws IOException {
         File file = new File(fileName);
         if (!file.exists()) {
             return null;
@@ -16,16 +17,19 @@ public class FileTools {
         try {
             inputStream = new FileInputStream(file);
             inputStream.read(results);
-            inputStream.close();
         } catch (Exception exception) {
-            // TODO:
-            return null;
+            throw exception;
+        } finally {
+            if (inputStream != null) {
+                inputStream.close();
+            }
         }
         return results;
     }
 
-    public static boolean writeFile(String fileName, String fileContent) {
+    public static boolean writeFile(String fileName, String fileContent) throws Exception {
         File file = new File(fileName);
+        FileWriter fileWriter = null;
         try {
             if (file.exists()) {
                 file.delete();
@@ -33,12 +37,14 @@ public class FileTools {
             if (!file.createNewFile()) {
                 return false;
             }
-            FileWriter fileWriter = new FileWriter(file);
+            fileWriter = new FileWriter(file);
             fileWriter.write(fileContent);
-            fileWriter.close();
         } catch (Exception exception) {
-            // TODO:
-            return false;
+            throw exception;
+        } finally {
+            if (fileWriter != null) {
+                fileWriter.close();
+            }
         }
         return true;
     }
@@ -54,7 +60,6 @@ public class FileTools {
 
     public static boolean exist(String filePath) {
         File file = new File(filePath);
-        boolean result = file.exists();
-        return result;
+        return file.exists();
     }
 }

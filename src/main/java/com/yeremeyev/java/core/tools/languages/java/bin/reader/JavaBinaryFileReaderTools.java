@@ -20,7 +20,7 @@ public class JavaBinaryFileReaderTools {
      * @param filePath path to jar file
      * @return map "className, classContent"
      */
-    private static Map<String, byte[]> loadJarClasses(String filePath) {
+    private static Map<String, byte[]> loadJarClasses(String filePath) throws Exception {
         Map<String, byte[]> classesMap = new HashMap<>();
         try {
             FileInputStream fileInputStream = new FileInputStream(filePath);
@@ -58,7 +58,7 @@ public class JavaBinaryFileReaderTools {
             } while (true);
 
         } catch (Exception exception) {
-            int a = 0;
+            throw exception;
         }
         return classesMap;
     }
@@ -67,7 +67,7 @@ public class JavaBinaryFileReaderTools {
      * @param filePath path to "*.class" file
      * @return map "className, classContent"
      */
-    private static Map<String, byte[]> loadClassContent(String filePath) {
+    private static Map<String, byte[]> loadClassContent(String filePath) throws Exception {
         Map<String, byte[]> classesMap = new HashMap<>();
         byte classBytes[] = FileTools.readyFile(filePath);
         classesMap.put(filePath, classBytes);
@@ -77,7 +77,7 @@ public class JavaBinaryFileReaderTools {
     /*
      * classPath, classData
      */
-    public static Map<String, byte[]> readFileClasses(String filePath) {
+    public static Map<String, byte[]> readFileClasses(String filePath) throws Exception {
         if (filePath.endsWith(JAR_FILE_POSTFIX)) {
             Map<String, byte[]> classesMap = loadJarClasses(filePath);
             return classesMap;
