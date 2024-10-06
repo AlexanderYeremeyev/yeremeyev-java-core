@@ -7,7 +7,7 @@
     <groupId>com.yeremeyev.java</groupId>
     <artifactId>yeremeyev-java-core</artifactId>
     <name>Common Java Tools</name>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
