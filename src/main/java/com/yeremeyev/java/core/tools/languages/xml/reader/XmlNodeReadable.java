@@ -1,6 +1,8 @@
 package com.yeremeyev.java.core.tools.languages.xml.reader;
 
 import com.yeremeyev.java.core.interfaces.common.Releasable;
+import com.yeremeyev.java.core.tools.languages.xml.exceptions.XmlException;
+import com.yeremeyev.java.core.tools.languages.xml.tools.StringTransformer;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -98,5 +100,9 @@ public class XmlNodeReadable implements Releasable {
     public void release() {
         childrenList.stream().forEach(XmlNodeReadable::release);
         node = null;
+    }
+
+    public String toXml() throws XmlException {
+        return StringTransformer.toXml(node);
     }
 }
